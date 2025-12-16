@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1 de Informática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="lab-container">
+        <button class="exit-button" onclick="window.location.href='menu.html'">Saída</button>
+        <div class="status-container">
+            <div class="status-item">
+                <p>Status: <span id="status-door">Fechada</span></p>
+                <img src="door-icon.png" alt="Fechadura" onclick="toggleStatus('door')">
+            </div>
+            <div class="status-item">
+                <p>Status: <span id="status-light">Desligado</span></p>
+                <img src="lightbulb-icon.png" alt="Luz" onclick="toggleStatus('light')">
+            </div>
+            <div class="status-item">
+                <p>Status: <span id="status-ac">Desligado</span></p>
+                <img src="air-conditioner-icon.png" alt="Ar-Condicionado" onclick="toggleStatus('ac')">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleStatus(item) {
+            var statusElement = document.getElementById('status-' + item);
+            if (statusElement.innerText === 'Desligado' || statusElement.innerText === 'Fechada') {
+                statusElement.innerText = item === 'door' ? 'Aberta' : 'Ligado';
+            } else {
+                statusElement.innerText = item === 'door' ? 'Fechada' : 'Desligado';
+            }
+        }
+    </script>
+</body>
+</html>

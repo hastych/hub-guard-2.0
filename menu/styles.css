@@ -1,0 +1,169 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.door-container, .door-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.door-container {
+    width: 300px;
+    height: 600px;
+    background-color: #fff;
+    border: 10px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.door {
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+}
+
+.mini-door {
+    width: 150px;
+    height: 300px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    margin: 10px;
+}
+
+.mini-door p {
+    margin-top: 0;
+}
+
+.mini-door a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.door-handle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border: 2px solid #999;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.door label, .mini-door p {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.door input, .mini-door p {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.door button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.door button:hover {
+    background-color: #45a049;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+}
+
+.not-ready {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.not-ready img {
+    max-width: 180%;
+    max-height: 180%;
+    object-fit: contain;
+}
+
+/* Adições para os botões de status */
+.lab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.exit-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.status-item {
+    margin: 20px 0;
+}
+
+.status-item p {
+    margin: 10px 0 5px;
+}
+
+.status-item img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}

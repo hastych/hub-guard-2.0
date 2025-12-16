@@ -1,0 +1,37 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="door-container">
+        <div class="door">
+            <div class="door-handle"></div>
+            <form id="loginForm" onsubmit="return validateLogin()">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var id = document.getElementById('id').value;
+            var senha = document.getElementById('senha').value;
+            if (id === 'admin' && senha === '1234') {
+                window.location.href = 'menu.html';
+                return false;
+            } else {
+                alert('ID ou senha incorretos.');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

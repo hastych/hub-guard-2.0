@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Laboratório</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Reservar Laboratório</h1>
+    </header>
+    <main class="container">
+        <form action="reservar.php" method="POST">
+            <label for="lab">Laboratório:</label>
+            <select id="lab" name="lab">
+                <option value="Lab1">Laboratório 1</option>
+                <option value="Lab2">Laboratório 2</option>
+                <option value="Lab3">Laboratório 3</option>
+            </select>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Seu nome de usuário" required>
+
+            <label for="data_hora">Data e Hora:</label>
+            <input type="datetime-local" id="data_hora" name="data_hora" required>
+
+            <button type="submit">Reservar</button>
+        </form>
+        <a href="menu.html" class="button">Voltar</a>
+    </main>
+</body>
+</html>
